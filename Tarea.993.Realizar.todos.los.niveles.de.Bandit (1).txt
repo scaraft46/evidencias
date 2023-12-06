@@ -1,0 +1,378 @@
+NIVEL 0
+ssh bandit@bandit.labs.overthewire.org -p 2220
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 0 A NIVEL 1
+ls
+readme
+cat readme
+logout
+mkdir overthewire
+cd overthewire
+mkdir bandit
+cd bandit/
+nano bandit1
+is 
+bandit1
+cat bandit1
+man sshpass
+sshpass -p 'cat bandit' ssh bandit@bandit.labs.overthewire.org -p 2220
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 1 A NIVEL 2
+ls
+cat ./-
+
+NIVEL 2 A NIVEL3
+ls
+cat "spaces in this filename"
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIEVEL 3 A NIVEL 4
+ls
+find inhere
+cat inhere/.hidden
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 4 A NIVEL 5
+ls
+cd inhere
+file ./*
+cat .-file0
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 5 A NIVEL 6
+ls
+cd inhere
+ls -l
+find ! -executable -size 1033c
+cat ./maybehere07/.file2
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 6 A NIVEL 7
+find / -user bandit7 -group bandit6 -size 33c
+find / -user bandit7 -group bandit6 -size 33c 2>/dev/null
+cat /var/lib/dpkg/info/bandit7.password
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 7 A NIVEL 8
+
+ls
+cat data.txt
+grep 'millionth' data.txt
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 8 A NIVEL 9
+
+ls
+uniq -u data.txt
+sort data.txt
+sort data.txt | uniq -u
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 9 A NIVEL 10
+
+ls
+grep '=' data.txt
+file data.txt
+strings data.txt | grep '==='
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 10 A NIVEL 11
+
+ls
+cat data.txt
+base64 -d data.txt
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 11 A NIVEL 12
+ls
+cat data.txt
+cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 12 A NIVEL 13
+
+ls
+cat data.txt
+mkdir /tmp/wf1
+cp data.txt /tmp/wf1/.
+cd /tmp/wf1
+ls
+xxd -r data.txt data
+file data
+mv data data.gz
+gzip -d data.gz
+ls
+file data
+mv data data.bz2
+bzip2 -d data.bz2
+file data
+mv data data.gz
+gzip -d data.gz
+file data
+mv data data.tar
+tar xvf data.tar
+file data5.bin
+mv data5.bin data.tar
+tar xvf data.tar
+file data6.bin
+mv data6.bin data.bz2
+bzip2 -d data.bz2
+file data
+mv data data.tar
+tar xvf data.tar
+file data8.bin
+mv data8.bin data.gz
+gzip -d data.gz
+file data
+cat data
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 13 A NIVEL 14
+ls
+ssh -i sshkey.private bandit14@localhost
+ssh -i sshkey.private -p 2220 bandit14@localhost
+ls /etc/bandit_pass/
+cat /etc/bandit_pass/bandit14
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 14 A NIVEL 15
+
+ls
+nc localhost 30000
+talnet localhost 30000
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 15 A NIVEL 16
+
+ls
+openssl s_client -connect localhost:30001
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 16 A NIVEL 17
+
+nmap -A -p 31000-32000 localhost
+echo "JQttfApK4SeyHwDlI9SXGR50qclOAil1" | openssl s_client -quiet -connect localhost:31790 -ign_eof
+cd /tmp/random_sshkey
+vim private.key
+chmod 400 private.key
+ls -l
+ssh -i private.key -p 2220 bandit17@localhost
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 17 A NIVEL 18
+
+ls
+cat passwords.old
+cat passwords.new
+diff passwords.old passwords.new
+
+NIVEL 18 A NIVEL 19
+
+ssh bandit18@bandit.labs.overthewire.org -p 2220 "cat ~/readme"
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 19 A NIVEL 20
+
+ls
+file bandit20-do
+ls -l
+./bandit20-do
+./bandit20-do cat /etc/bandit_pass/bandit20
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 20 A NIVEL 21
+
+ls
+ls -l
+echo -n "VxCzzJaVykI6W36BkBU0mJTCM8rR95XT" | nc -l -p 1234 &
+./suconnect 1234
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 21 A NIVEL 22
+
+cd /etc/cron.d
+ls
+cat cronjob_bandit22
+cat /usr/bin/cronjob_bandit22.sh
+cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 22 A NIVEL 23
+
+ls /etc/cron.d/
+cat /etc/cron.d/cronjob_bandit23
+cat /usr/bin/cronjob_bandit23.sh
+echo I am user bandit23 | md5sum | cut -d ' ' -f 1
+cat /tmp/8ca319486bfbbc3663ea0fbe81326349
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 23 A NIVEL 24
+ls /etc/cron.d
+cat /etc/cron.d/cronjob_bandit24
+cat /usr/bin/cronjob_bandit24.sh
+mkdir pass
+cd /tmp/passs
+touch pass.sh
+vi pass.sh
+#!/bin/bash
+cat /etc/bandit_pass/bandit24 > /tmp/ypass/pass
+touch pass
+chmod 777 -R /tmp/passs
+cp pass.sh /var/spool/bandit24/foo
+ls -l
+ls -l
+ls -l
+cat pass
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 24 A NIVEL 25
+nc localhost 30002
+mkdir /tmp/bandit-pass25
+cd /tmp/bandit-pass25
+vi script.sh
+#!/bin/bash
+
+for a in {0..9}
+do      
+    for e in {0..9}
+    do
+        for i in {0..9}
+        do
+           for o in {0..9}
+           do
+                echo "VEEfGXJ1PBSsPSnvsjI8p759leLZ9GGar $a$e$i$o"	   
+          done
+        done
+    done
+done 
+chmod +x script.sh
+ls -l
+./script.sh | nc localhost 30002
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 25 A NIVEL 26
+ls
+ssh -i bandit26.sshkey bandit26@localhost -p 2220
+modo more se hace pequeña la consola
+:r cat /etc/bandit_pass/bandit26
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 26 A NIVEL 27
+set shell=/bin/bash
+:shell
+ls
+./bandit27-do cat /etc/bandit_pass/bandit27
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 27 A NIVEL 28
+mkdir /tmp/Elias
+cd /tmp/Elias
+git clone ssh://bandit27-git@localhost:2220/home/bandit27-git/repo
+ls -l
+cd repo
+cat README
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 28 A NIVEL 29
+
+mkdir /tmp/Elias Nivel 0
+cd /tmp/Elias Nivel 0
+git clone ssh://bandit28-git@localhost:2220/home/bandit28-git/repo
+cd repo
+ls -a
+cat README.md
+git branch
+git log
+//revisamos la última modificación
+git checkout abcff758fa6343a0d002a1c0add1ad8c71b88534
+ls
+cat README.md
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 29 A NIVEL 30
+
+ls
+mkdir /tmp/Elias1
+cd /tmp/Elias1
+git clone ssh://bandit29-git@localhost:2220/home/bandit29-git/repo
+cd repo
+ls -a
+cat README.md
+git branch -r
+git checkout dev
+ls
+cat README.md
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 30 A NIVEL 31
+mkdir /tmp/Elias Nivel 01
+cd /tmp/Elias Nivel 01
+git clone ssh://bandit30-git@localhost:2220/home/bandit30-git/repo
+ls
+cd repo
+ls -a
+cat README.md
+git branch -r
+git tag
+git show secret
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 31 A NIVEL 32
+
+ls
+cd repo
+ls -a
+
+rm .gitignore
+echo 'May I come in?' > key.txt
+git add key.txt
+git branch
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 32 A NIVEL 33
+$0
+$export SHELL=/bin/bash
+echo $SHELL
+$SHELL
+ls
+cd /etc/bandit_pass
+ls
+cat bandit33
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NIVEL 33 A NIVEL 34
+
+cat README.txt
