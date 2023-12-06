@@ -1,3 +1,5 @@
+#MAZA GOMEZ JESUS ELIAS
+
 # Definimos la celda del jail
 celda = {
     'puertas': ['adelante', 'atrás'],
