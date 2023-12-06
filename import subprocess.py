@@ -4,7 +4,7 @@ import os
 import builtins
 import math
 import random
-// mazagomez jesus elias
+# mazagomez jesus elias
 class RestrictedEnvironment:
     def __init__(self):
         self.safe_builtins = {
