@@ -1,66 +1,38 @@
-import sys
-import traceback
-import os
-import builtins
-import math
-import random
-# maza gomez jesus elias
-class RestrictedEnvironment:
-    def __init__(self):
-        self.safe_builtins = {
-            'print': print,
-            'input': input,
-            'len': len,
-            'str': str,
-            'int': int,
-            'float': float,
-            'list': list,
-            'tuple': tuple,
-            'dict': dict,
-            'range': range,
-            'abs': abs,
-            'sum': sum,
-            'min': min,
-            'max': max,
-        }
+# Definimos la celda del jail
+celda = {
+    'puertas': ['adelante', 'atrás'],
+    'paredes': ['izquierda', 'derecha'],
+    'suelo': 'piso',
+    'techo': 'tejado'
+}
 
-        self.safe_builtins['open'] = self.restricted_open
+# Definimos las acciones permitidas en la celda
+acciones_permitidas = {
+    'adelante': lambda: print('Has llegado a la puerta frontal'),
+    'atrás': lambda: print('Has regresado a la puerta trasera'),
+    'izquierda': lambda: print('Has tocado la pared izquierda'),
+    'derecha': lambda: print('Has tocado la pared derecha')
+}
 
-        self.safe_modules = {
-            'math': math,
-            'random': random,
-        }
+# Definimos una función para moverse por la celda
+def moverse(direccion):
+    if dirección in celda['puertas']:
+        acciones_permitidas[direccion]()
+    elif dirección in celda['paredes']:
+        print(f"La pared {direccion} no es una salida")
+    else:
+        print("No puedes subir al tejado ni cavar el suelo")
 
-        self.user_globals = {}
+# Creamos una función para inicializar el jail
+def init_jail():
+    print("Bienvenido al jail! Estás en una celda con paredes y puertas.")
+    print("Puedes moverte hacia adelante, atrás, izquierda o derecha.")
+    print("Para salir, debes encontrar la llave que se encuentra en alguna parte de la celda.")
 
-    def restricted_open(self, *args, **kwargs):
-        raise RuntimeError("Función 'open' está deshabilitada")
+# Inicializamos el jail
+init_jail()
 
-    def execute_code(self, code):
-        try:
-            exec(code, {'__builtins__': self.safe_builtins}, self.user_globals)
-        except Exception as e:
-            return f"Error: {str(e)}"
-        return "proceso exitoso."
-
-def main():
-    print("Escribe 'exit' para salir.")
-    environment = RestrictedEnvironment()
-
-    while True:
-        try:
-            user_code = input("////")
-
-            if user_code.lower() == 'exit':
-                break
-
-            result = environment.execute_code(user_code)
-            print(result)
-        except KeyboardInterrupt:
-            print("\nSaliendo")
-            break
-        except Exception as e:
-            print(f"Error: {str(e)}")
-
-if name== "main":
-    main()exit
+# Comenzamos a interactuar con el usuario
+while True:
+    direccion = input("¿Dónde quieres moverte? (adelante, atrás, izquierda, derecha) ")
+    moverse(direccion)
