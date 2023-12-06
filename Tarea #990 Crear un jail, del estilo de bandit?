@@ -4,7 +4,7 @@ import os
 import builtins
 import math
 import random
-# mazagomez jesus elias
+# maza gomez jesus elias
 class RestrictedEnvironment:
     def __init__(self):
         self.safe_builtins = {
@@ -62,5 +62,5 @@ def main():
         except Exception as e:
             print(f"Error: {str(e)}")
 
-if __name__ == "main":
+if name== "main":
     main()exit
